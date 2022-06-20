@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MyCambria';
+  src: url('webfont.ttf')  format('truetype');
+}
+
+
 .fa-input {
   font-family: FontAwesome, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
