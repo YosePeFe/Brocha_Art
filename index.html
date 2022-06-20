@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/819d38fe29.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-----------------------NAVBAR----------------------------->
+    <nav class="brocha-navbar">
+        <div class="brocha-logo">
+            <img src="img/Logo_Nav.png" alt="logo" width="120px">
+            <img src="img/Brocha_Art.png" alt="logo" width="130px">
+        </div>
+        <div class="brocha-content">
+            <div class="brocha-social">
+                <a href="" class="brocha-item"><img src="img/icono-ig.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-f.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-t.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-be.png" alt=""></a>
+            </div>
+            <div class="brocha-hambuger" onclick="hamburgerFun()">
+                <img src="./img/hamburgesa.png" alt="">
+            </div>
+            <div class="brocha-list" data-brocha-show="false" id="idBrochaListNav">
+                <a href="./index.html" class="brocha-item active">Inicio</a>
+                <a href="./desarrollo.html" class="brocha-item">Desarrollo</a>
+                <a href="./galeria.html" class="brocha-item">Galería</a>
+                <a href="./contacto.html" class="brocha-item">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!--<ul>
+        <li>
+            <a class="logo"><img src="img/Logo_Nav.png" alt="" width="70" height="70"
+                    style="margin: 20px 0px 0px 120px; float: left" /></a>
+        </li>
+        <li>
+            <a class="logo"><img src="img/Brocha_Art.png" alt="" width="60" height="30"
+                    style="margin: 40px 0px 0px 0px; float: left" /></a>
+        </li>
+        <li>
+            <a class="icon" href="#about"><img style="margin: 45px 120px 0px 0px; float: right" src="img/icono-be.png"
+                    alt="" /></a>
+        </li>
+        <li>
+            <a class="icon" href="#contact"><img style="margin: 40px 0px 0px 0px; float: right" src="img/icono-t.png"
+                    alt="" /></a>
+        </li>
+        <li>
+            <a class="icon" href="#news"><img style="margin: 40px 0px 0px 0px; float: right" src="img/icono-f.png"
+                    alt="" /></a>
+        </li>
+        <li>
+            <a class="icon" href="#home"><img style="margin: 40px 0px 0px 0px; float: right" src="img/icono-ig.png"
+                    alt="" /></a>
+        </li>
+        <li>
+            <a class="" href="#home" style="margin: 90px -160px 20px 0px">Contacto</a>
+        </li>
+        <li><a href="#news" style="margin: 90px -50px 20px 0px">Galería</a></li>
+        <li>
+            <a href="#contact" style="margin: 90px 30px 20px 0px">Desarrollo</a>
+        </li>
+        <li><a href="#about" style="margin: 90px 30px 20px 0px">Inicio</a></li>
+    </ul>-->
+    <div style="background-color: #000; text-align: center">
+        <img src="img/Brocha_Art.png" alt="" />
+    </div>
+    <div class="container-fluid ">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-4 order-1 order-lg-0 px-5  px-lg-3">
+                <img class="w-75" src="img/Cosmic.png" alt="" />
+            </div>
+            <div class="col-12 col-lg-4 order-0 order-lg-1 px-5  px-lg-3">
+                <img class="w-100" src="img/Ilustracion01.png" id="getImage" />
+            </div>
+            <div class="col-12 col-lg-2  d-none d-lg-block order-2" style="padding-top: 15%;">
+                <button onclick="imagefun()" type="submit" class="btn">
+                    <img src="img/iconoflecha.png" alt="ArrowIcon" />
+                </button>
+            </div>
+            <div class="brocha-index-buttons col-12 d-flex d-lg-none order-2">
+                <div class="brocha-index-buttons-item active" onclick="imagefunNumber(1, this)"></div>
+                <div class="brocha-index-buttons-item" onclick="imagefunNumber(2, this)"></div>
+                <div class="brocha-index-buttons-item" onclick="imagefunNumber(3, this)"></div>
+                <div class="brocha-index-buttons-item" onclick="imagefunNumber(4, this)"></div>
+                <div class="brocha-index-buttons-item" onclick="imagefunNumber(5, this)"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function imagefun() {
+        var Image_Id = document.getElementById("getImage");
+        //Reset the image carrousel if is the last image
+        if (Image_Id.src.match("img/Ilustracion05.png")) {
+            Image_Id.src = "img/Ilustracion01.png";
+            return;
+        }
+        if (Image_Id.src.match("img/Ilustracion01.png")) {
+            Image_Id.src = "img/Ilustracion02.png";
+        } else if (Image_Id.src.match("img/Ilustracion02.png")) {
+            Image_Id.src = "img/Ilustracion03.png";
+        } else if (Image_Id.src.match("img/Ilustracion03.png")) {
+            Image_Id.src = "img/Ilustracion04.png";
+        } else {
+            Image_Id.src = "img/Ilustracion05.png";
+        }
+    }
+
+    function imagefunNumber(imageNumber, element) {
+        var pointers = document.getElementsByClassName("brocha-index-buttons-item")
+        for (let i = 0; i < pointers.length; i++) {
+            pointers[i].classList.remove("active")
+        }
+
+        var Image_Id = document.getElementById("getImage");
+        switch (imageNumber) {
+            case 1:
+                Image_Id.src = "img/Ilustracion01.png";
+                break;
+            case 2:
+                Image_Id.src = "img/Ilustracion02.png";
+                break;
+            case 3:
+                Image_Id.src = "img/Ilustracion03.png";
+                break;
+            case 4:
+                Image_Id.src = "img/Ilustracion04.png";
+                break;
+
+            default:
+                Image_Id.src = "img/Ilustracion05.png";
+                break;
+        }
+        element.classList.add("active")
+    }
+
+    function hamburgerFun() {
+        if (document.getElementById('idBrochaListNav').dataset.brochaShow == "false") {
+            document.getElementById('idBrochaListNav').dataset.brochaShow = true
+        } else {
+            document.getElementById('idBrochaListNav').dataset.brochaShow = false
+        }
+    }
+</script>
+
+</html>

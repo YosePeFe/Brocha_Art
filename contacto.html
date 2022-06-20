@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/819d38fe29.js" crossorigin="anonymous"></script>
+    <style>
+        .outerDiv {
+            height: 400px;
+            width: 600px;
+            margin: 50px auto;
+            padding: 5px;
+        }
+
+        .leftDiv {
+            height: 400px;
+            width: 48%;
+            float: left;
+        }
+
+        .rightDiv {
+            height: 400px;
+            width: 48%;
+            float: right;
+            font-size: 1rem;
+            margin-top: 50px;
+        }
+
+        .imgab {
+            width: 100%;
+        }
+
+        @media screen {
+            .hidden-desktop{
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hidden-desktop{
+                display: block;
+                margin-top: 50px;
+            }
+
+            .hidden-mobile{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #F1E9DE;">
+    <!-----------------------NAVBAR----------------------------->
+    <nav class="brocha-navbar">
+        <div class="brocha-logo">
+            <img src="img/Logo_Nav.png" alt="logo" width="120px">
+            <img src="img/Brocha_Art.png" alt="logo" width="130px">
+        </div>
+        <div class="brocha-content">
+            <div class="brocha-social">
+                <a href="" class="brocha-item"><img src="img/icono-ig.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-f.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-t.png" alt=""></a>
+                <a href="" class="brocha-item"><img src="img/icono-be.png" alt=""></a>
+            </div>
+            <div class="brocha-hambuger" onclick="hamburgerFun()">
+                <img src="./img/hamburgesa.png" alt="">
+            </div>
+            <div class="brocha-list" data-brocha-show="false" id="idBrochaListNav">
+                <a href="./index.html" class="brocha-item active">Inicio</a>
+                <a href="./desarrollo.html" class="brocha-item">Desarrollo</a>
+                <a href="./galeria.html" class="brocha-item">Galería</a>
+                <a href="./contacto.html" class="brocha-item">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="text-align: center; background-color: #F1E9DE;">
+        <img class="img-fluid" src="img/Mi trabajo-17.png" alt="" />
+    </div>
+
+    <div class="outerDiv container-md hidden-mobile container-fluid hidden-mobile" style="background-color: #F1E9DE;">
+        <div class="leftDiv">
+            <img class="imgab" src="img/logocontacto_Mesa de trabajo 1.png" alt="">
+        </div>
+        <div class="rightDiv">
+            <ul style="color: #000; background-color: #F1E9DE;">
+                <li><img class="img-fluid" src="img/icono-ig.png" alt="">brocha_art</li>
+                <li><img class="img-fluid" src="img/icono-f.png" alt="">Brocha</li>
+                <li><img class="img-fluid" src="img/icono-be.png" alt="">Frida Rocha</li>
+                <li><img class="img-fluid" src="img/icono-t.png" alt="">Brocha_ART</li>
+                <li><img class="img-fluid" src="img/iconocorreo-14.png" alt="">brochadesign</li>
+                <li> <span style="color: #284BF2;">TEL:</span> 044 477 840 3830</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hidden-desktop">
+        <div style="margin-left: 70px; margin-right: 20px;">
+            <ul style="color: #000; background-color: #F1E9DE;">
+                <li><img class="img-fluid" src="img/icono-ig.png" alt="">brocha_art</li>
+                <li><img class="img-fluid" src="img/icono-f.png" alt="">Brocha</li>
+                <li><img class="img-fluid" src="img/icono-be.png" alt="">Frida Rocha</li>
+                <li><img class="img-fluid" src="img/icono-t.png" alt="">Brocha_ART</li>
+                <li><img class="img-fluid" src="img/iconocorreo-14.png" alt="">brochadesign</li>
+                <li> <span style="color: #284BF2;">TEL:</span> 044 477 840 3830</li>
+            </ul>
+        </div>
+        <div style="text-align: center;">
+            <img class="imgab" src="img/logocontacto_Mesa de trabajo 1.png" alt="">
+        </div> 
+    </div>
+
+</body>
+<script>
+    function hamburgerFun() {
+        if (document.getElementById('idBrochaListNav').dataset.brochaShow == "false") {
+            document.getElementById('idBrochaListNav').dataset.brochaShow = true
+        } else {
+            document.getElementById('idBrochaListNav').dataset.brochaShow = false
+        }
+    }
+</script>
+
+</html>
